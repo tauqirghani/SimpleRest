@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:smtp="http://xsd.tns.tibco.com/bw/models/sharedresource/smtp" xmi:id="_eii6kBssEeet27GBNA1aCA" targetNamespace="http://tns.tibco.com/bw/composite/SimpleRest.module" name="SimpleRest.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_kJ-UkMX7EeedRYHynknuEw" name="resource" promote="ComponentProcess/resource">
+    <sca:interface.wsdl xmi:id="_kKEbMMX7EeedRYHynknuEw" interface="http://xmlns.example.com/20171110014259PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/simplerest/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_kKIFkMX7EeedRYHynknuEw" name="RestService" path="/resource" docBasePath="http://localhost:7777/SimpleRest.module" docResourcePath="Resource" basePath="/" connector="simplerest.module.SimpleResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simplerest.module.Process-Resource.json">
+      <operation xmi:id="_kKIsoMX7EeedRYHynknuEw" operationName="get" nickname="get-resource" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_kKNlIMX7EeedRYHynknuEw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_kKJTsMX7EeedRYHynknuEw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_GjSSEFpwEeiMheutDHzdSw" name="helthcheck" promote="ComponentProcess/helthcheck">
+    <sca:interface.wsdl xmi:id="_GjZm0FpwEeiMheutDHzdSw" interface="http://xmlns.example.com/20171110014259PLT#wsdl.interface(helthcheck)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_GjgUgFpwEeiMheutDHzdSw" name="RestService1" path="/helthcheck" docBasePath="http://localhost:7777/SimpleRest.module" docResourcePath="Resource" basePath="/" connector="simplerest.module.SimpleResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simplerest.module.Process-Resource.json">
+      <operation xmi:id="_Gjg7kFpwEeiMheutDHzdSw" operationName="get" nickname="get-helthcheck" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_GjnpQFpwEeiMheutDHzdSw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Gjg7kVpwEeiMheutDHzdSw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_fOT0YBssEeet27GBNA1aCA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_fOgosBssEeet27GBNA1aCA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_fOk6IBssEeet27GBNA1aCA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_fOokgBssEeet27GBNA1aCA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_fOs18BssEeet27GBNA1aCA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_fOwgUBssEeet27GBNA1aCA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_fO0KsBssEeet27GBNA1aCA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tZQyAF_zEeiYkpI0HJc_Pw" name="BWCE.HOST.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vz9S0F_zEeiYkpI0HJc_Pw" name="BWCE.PORT.NUMBER" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_iYIjgMX7EeedRYHynknuEw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_iYIjgcX7EeedRYHynknuEw" processName="simplerest.module.Process"/>
+    <sca:service xmi:id="_kJ6DIMX7EeedRYHynknuEw" name="resource">
+      <sca:interface.wsdl xmi:id="_kJ6qMMX7EeedRYHynknuEw" interface="http://xmlns.example.com/20171110014259PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/simplerest/module/Process.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_GjOAoFpwEeiMheutDHzdSw" name="helthcheck">
+      <sca:interface.wsdl xmi:id="_GjPOwFpwEeiMheutDHzdSw" interface="http://xmlns.example.com/20171110014259PLT#wsdl.interface(helthcheck)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

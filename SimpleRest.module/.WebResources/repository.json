@@ -1,0 +1,21 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://qa-integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/simplerest.module.Process-SimpleResource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simplerest.module.SimpleProcess-SimpleResource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simplerest.module.Process-Resource.json",
+            "type": "generated"
+        }
+    ]
+}
